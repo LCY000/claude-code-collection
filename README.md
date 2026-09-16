@@ -42,11 +42,11 @@ Codex 的 `PermissionRequest` 會在權限 UI 顯示前觸發，所以提示音�
 
 整理值得安裝的 Claude Code Skills，附功能說明與適用情境，涵蓋：
 
-- 簡報製作
 - 開發方法論
 - 任務規劃
 - 前端 UI 設計
 - 影片製作（Remotion）
+- 圖表製作與速成解釋（[eli5 × lieflat-charts](skills/eli5-lieflat-charts.md) 怎麼配合）
 
 ---
 

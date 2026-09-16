@@ -2,27 +2,10 @@
 
 記錄值得安裝的 Claude Code Skills，快速翻閱用。
 
-- [簡報製作](#簡報製作)
 - [萬用開發方法論](#萬用開發方法論)
 - [規劃 / 任務管理](#規劃--任務管理)
 - [前端 UI 設計](#前端-ui-設計)
-
----
-
-## 簡報製作
-
-### frontend-slides
-**連結：** https://github.com/zarazhangrui/frontend-slides
-
-不懂 CSS/JS 也能做出專業 HTML 簡報。最大特色是**先生成預覽讓你視覺選款式**，而不是用文字描述，避免雞同鴨講。有 12 個預設主題，分三大類：
-
-- **暗色系：** Bold Signal、Electric Studio、Creative Voltage、Dark Botanical
-- **亮色系：** Notebook Tabs、Pastel Geometry、Split Pastel、Vintage Editorial
-- **特色款：** Neon Cyber、Terminal Green、Swiss Modern、Paper & Ink
-
-也支援把現有 PPT 直接轉成響應式網頁版（保留文字與圖片），輸出為單一 HTML 檔，可部署到 Vercel 或匯出 PDF。
-
-**依賴：** Python（python-pptx）、Node.js、Vercel 帳號（選用）
+- [圖表 / 速成解釋](#圖表--速成解釋)
 
 ---
 
@@ -118,3 +101,28 @@ Remotion 官方提供的 Claude Code skill，用 React 程式化生成影片時�
 | 需要輸出動態影片 | 加裝 Remotion Skills |
 
 `frontend-design` 負責**美感方向和設計思維**，`ui-ux-pro-max-skill` 負責**系統性的元件與配色規則庫**，兩者互補。
+
+---
+
+## 圖表 / 速成解釋
+
+### eli5
+**連結：** https://github.com/anthropics/claude-plugins-community/tree/main/eli5
+
+`/eli5 <主題>` 一行指令，把任何主題解釋給完全不懂的人聽，輸出**大圖示、少文字**的 HTML 解釋卡，而不是長篇文字牆。
+
+- 沒有固定範本或圖庫，示意圖全靠 Claude 臨場發揮——彈性最高、上手最快
+- 裝完不用額外設定，馬上能用
+- 適合「秒懂」而非「精確」的情境：搞懂陌生名詞、跟不懂技術的人解釋東西、幫貼文配一張說明圖
+
+### lieflat-charts
+**連結：** https://github.com/larashero3-dotcom/lieflat-charts
+
+模板驅動的資料視覺化 skill，跟 eli5 取向相反：**不追求快，追求每張圖都誠實、可考究**。
+
+- 圖表一律先從 60+ 張真實範本裡選型，不會自己發明畫法
+- 預設灰階（Mono）保底，只有資料語意明確才切換彩色，同一份交付只鎖定一種色彩系統
+- 嚴格禁止斷軸、發光、3D 等失真手法，遇到這類要求會直接拒絕並給誠實替代方案
+- 除了單圖，也能做整頁報告（12 套中英文模板）
+
+**兩者什麼情境該配合著用 → [eli5 × lieflat-charts：兩個 skill 怎麼配合](eli5-lieflat-charts.md)**

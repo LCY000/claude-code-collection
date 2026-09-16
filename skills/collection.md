@@ -109,7 +109,7 @@ Remotion 官方提供的 Claude Code skill，用 React 程式化生成影片時�
 ### lieflat-charts
 **連結：** https://github.com/larashero3-dotcom/lieflat-charts
 
-模板驅動的生成資料視覺化 skill，強調每張圖都要站得住腳。
+模板驅動的生成資料視覺化 skill，畫出精美又誠實的圖表。
 
 - **有範本：** 60+ 張真實圖型庫，不會亂畫
 - **有底線：** 禁止斷軸、發光、3D 等失真手法
@@ -118,7 +118,9 @@ Remotion 官方提供的 Claude Code skill，用 React 程式化生成影片時�
 ### eli5
 **連結：** https://github.com/anthropics/claude-plugins-community/tree/main/eli5
 
-`/eli5 <主題>`，一秒生成一張**大圖示、少文字**的解釋卡；取向跟 lieflat-charts 完全相反，**求快不求準**。
+`/eli5 <主題>`，一秒生成一張**大圖示、少文字**的解釋卡。
+
+取向跟 lieflat-charts 完全相反，**求快不求準**。
 
 - **零門檻：** 裝完直接用，不用設定
 - **零範本：** 畫法全靠 Claude 臨場發揮，最隨性

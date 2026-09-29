@@ -41,7 +41,7 @@
     "showModel": true,
     "showContextBar": true,
     "showTools": false,
-    "showAgents": true,
+    "showAgents": false,
     "showTodos": false,
     "showProject": false,
     "showConfigCounts": true,
@@ -84,6 +84,16 @@ Usage 5h 20% (resets in 3h 48m) | Weekly 6% (resets in 3d 14h)
 
 拿掉「Usage」前綴、「Weekly」縮成「7d」、「resets in」的措辭整個消失（精簡格式本來就不含這幾個字），字數少很多，比較容易擠回同一行。
 
+## 子代理（Agents）會跟內建面板重複
+
+`display.showAgents` 會在狀態列下方列出正在跑的子代理，例如：
+
+```
+◐ general-purpose [opus-5.5]: Eval scenario 1 profile mode (12s)
+```
+
+但 Claude Code 本身就有內建的背景代理面板（輸入框下方的 `● main / ○ general-purpose …`），同樣三個子代理會顯示兩次。內建面板還多了每個代理目前在做什麼、執行時間和 token 用量，資訊比 HUD 更完整，所以這裡設為 `false`。
+
 ---
 
 ## 目前開啟的功能
@@ -92,7 +102,6 @@ Usage 5h 20% (resets in 3h 48m) | Weekly 6% (resets in 3d 14h)
 |------|------|
 | Model | 目前使用的模型名稱 |
 | Context bar | Context 視窗使用量（視覺化） |
-| Agents | 子 agent 執行狀態 |
 | Config counts | 目前載入的設定數量 |
 | Usage | Token 用量與費用（文字格式） |
 | Git branch | 目前 git 分支名稱 |
@@ -107,6 +116,7 @@ Usage 5h 20% (resets in 3h 48m) | Weekly 6% (resets in 3d 14h)
 |------|------|-----------|
 | Separators | 各項目之間的分隔線 | `showSeparators` |
 | Tools | 本次 session 使用的工具次數 | `showTools` |
+| Agents | 子 agent 執行狀態（與內建背景代理面板重複，見上方說明） | `showAgents` |
 | Todos | Todo 項目完成進度 | `showTodos` |
 | Project | 專案名稱 | `showProject` |
 | Token breakdown | Input / Output / Cache token 各別數量 | `showTokenBreakdown` |
